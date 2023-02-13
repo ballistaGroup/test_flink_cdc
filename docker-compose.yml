@@ -164,7 +164,7 @@ services:
 
   # Flink
   jobmanager:
-      image: flink:1.16.2-java8
+      image: flink:1.16.1-java8
       ports:
         - "8085:8081"
       hostname: flink-jobmanager
@@ -179,7 +179,7 @@ services:
           jobmanager.rpc.address: jobmanager
 
   taskmanager:
-    image: flink:1.16.2-java8
+    image: flink:1.16.1-java8
     depends_on:
       - jobmanager
     command: taskmanager
